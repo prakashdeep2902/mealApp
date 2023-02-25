@@ -9,11 +9,11 @@ const mealDetailContent=document.querySelector('.meal-details-content');
 const recipeCloseButton=document.getElementById('recipe-close-btn');
 
 
-icon.onclick=function(){
+icon.onclick=function(){ 
   search.classList.toggle('active')
 
 };
-
+ 
 //   intilize event listener
 search_button.addEventListener('click',getMealList);   
 
@@ -32,7 +32,6 @@ function getMealList()
 {
   let term=searchInputTxt.value
   term.trim()
- 
   fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`).then((res)=>res.json())
   .then(data=>{
        
